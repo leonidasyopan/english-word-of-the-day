@@ -10,16 +10,18 @@ class HomePage extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).backgroundColor,
           ),
-          child: _rowsContainer(),
+          child: _rowsContainer(context),
         ),
       ),
     );
   }
 
-  Widget _rowsContainer() {
+  Widget _rowsContainer(context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Awesome'),
+        Text('Awesome', style: Theme.of(context).textTheme.headline1),
       ],
     );
   }
